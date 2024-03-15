@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 
 import seed_func
-from logica_negocio import categoria
+from logica_negocio import categoria, produto
 
 """
 alembic init migrations
@@ -42,10 +42,11 @@ if __name__ == "__main__":
         elif opcao == 4:
             categoria.remover(motor)
         elif opcao == 5:
-            pass
+            produto.incluir(motor)
         elif opcao == 6:
             pass
         elif opcao == 7:
+            produto.alterar(motor)
             pass
         elif opcao == 8:
             pass
